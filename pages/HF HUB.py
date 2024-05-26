@@ -6,7 +6,7 @@ import streamlit as st
 
 # Esempi tratti da quì https://python.langchain.com/docs/integrations/llms/huggingface_hub
 
-os.environ["HUGGINGFACEHUB_API_TOKEN"] = "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"
+os.environ["HUGGINGFACEHUB_API_TOKEN"] = ""
 
 st.subheader('In questo esempio si utilizza Langchain con HUB HuggingFace', divider='rainbow')
 
