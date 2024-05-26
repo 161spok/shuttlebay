@@ -8,7 +8,7 @@ st.title("HF solo - LLM gpt2-medium")
 
 API_URL = "https://api-inference.huggingface.co/models/gpt2-medium"
 HEADERS = {
-    "Authorization": " Bearer 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"  # sostituisci con la tua chiave API
+    "Authorization": " Bearer "  # sostituisci con la tua chiave API
 }
 
 # GPT-2 Medium is the 355M parameter version of GPT-2, a transformer-based language model created 
