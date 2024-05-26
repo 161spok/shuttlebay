@@ -22,7 +22,7 @@ if current_date > target_date:
 else:
     llm_model = "gpt-3.5-turbo-0301"
 
-llm = ChatOpenAI(openai_api_key = "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", temperature=0.0, model=llm_model)
+llm = ChatOpenAI(openai_api_key = "", temperature=0.0, model=llm_model)
 
 file = 'inventory_v2.csv'
 loader = CSVLoader(file_path=file)
