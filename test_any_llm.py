@@ -17,7 +17,7 @@ import random
 requests.adapters.DEFAULT_TIMEOUT = 60
 
 endpoint_url = "https://YOUR_ENDPOINT.endpoints.huggingface.cloud"
-hf_api_key = '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'
+hf_api_key = ''
 
 
 
