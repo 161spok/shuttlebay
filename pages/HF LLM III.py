@@ -17,7 +17,7 @@ HEADERS = {
 
 """ API_URL = "https://api-inference.huggingface.co/models/falcon-7b"
 HEADERS = {
-    "Authorization": "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"  # sostituisci con la tua chiave API
+    "Authorization": ""  # sostituisci con la tua chiave API
 } """
 
 #===================================================================================================
