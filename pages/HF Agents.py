@@ -15,7 +15,7 @@ import getpass
 import streamlit as st
 import os
 
-os.environ["HUGGINGFACEHUB_API_TOKEN"] = "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"
+os.environ["HUGGINGFACEHUB_API_TOKEN"] = ""
 
 st.subheader('In questo esempio si utilizza  HuggingFace Trasformers', divider='rainbow')
 
