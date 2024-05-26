@@ -8,7 +8,7 @@ st.title("Esempio 3 con chiave HF solo - LLM google/flan-t5-xxl")
 st.write("You have entered : ", st.session_state["my_input"])
 
 
-os.environ["HUGGINGFACEHUB_API_TOKEN"] = "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"
+os.environ["HUGGINGFACEHUB_API_TOKEN"] = ""
 
 template = """Question: {query}
 
