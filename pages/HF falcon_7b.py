@@ -7,7 +7,7 @@ import os
 
 from langchain import HuggingFaceHub, PromptTemplate, LLMChain
 
-os.environ['API_KEY'] = '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'
+os.environ['API_KEY'] = ''
 
 #model_id = 'tiiuae/falcon-7b-instruct' # con questo funziona
 #model_id = 'h2oai/h2ogpt-oasst1-falcon-40b'
