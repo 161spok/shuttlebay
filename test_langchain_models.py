@@ -6,7 +6,7 @@ from langchain.chat_models import ChatOpenAI
 import datetime
 import streamlit as st
 
-openai.api_key = "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"
+openai.api_key = ""
 
 # Get the current date
 current_date = datetime.datetime.now().date()
