@@ -1,6 +1,6 @@
 
 import openai
-openai.api_key = "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"
+openai.api_key = ""
 
 prompt = "Hello, my name is John and I am a software engineer."
 model = "text-davinci-003"
