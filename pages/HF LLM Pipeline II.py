@@ -5,7 +5,7 @@ import streamlit as st
 from transformers import pipeline, Conversation
 import os
 
-os.environ["HUGGINGFACEHUB_API_TOKEN"] = "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"
+os.environ["HUGGINGFACEHUB_API_TOKEN"] = ""
 
 #expander = st.expander("See explanation")
 #expander.write("The chart above shows some numbers I picked for you.")
