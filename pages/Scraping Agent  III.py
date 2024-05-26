@@ -23,9 +23,9 @@ load_dotenv()
 brwoserless_api_key = os.getenv("BROWSERLESS_API_KEY")
 serper_api_key = os.getenv("SERP_API_KEY")
 
-os.environ['BROWSERLESS_API_KEY'] = "4aadfec8-7dd4-41ea-a655-a0cc51ed4765"
-os.environ['SERP_API_KEY'] = "699777f7636f1fcaf3c41710fa23e833cdf70805"
-os.environ['OPENAI_API_KEY'] = "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"
+os.environ['BROWSERLESS_API_KEY'] = ""
+os.environ['SERP_API_KEY'] = ""
+os.environ['OPENAI_API_KEY'] = ""
 
 print(brwoserless_api_key)
 print(serper_api_key)
