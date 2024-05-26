@@ -8,7 +8,7 @@ from langchain.callbacks import get_openai_callback
 import os
  
 # Step 2: Set the OpenAI API key
-openai.api_key = "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"
+openai.api_key = ""
  
 # Step 3: Get user input
 user_input = input("Enter a concept: ")
@@ -23,7 +23,7 @@ prompt = PromptTemplate(
 print(prompt.format(concept=user_input))
  
 # Step 6: Instantiate the LLMChain
-llm = OpenAI(openai_api_key = "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", temperature=0.9)
+llm = OpenAI(openai_api_key = "", temperature=0.9)
 #chain = LLMChain(llm=llm, prompt=prompt)
  
 # Step 7: Run the LLMChain
