@@ -12,10 +12,10 @@ st.write("You have entered : ", st.session_state["my_input"])
 
 
 # provide your API KEY here
-HUGGINGFACEHUB_API_TOKEN = st.secrets['hfkey']["hfapikey"]
-
+#HUGGINGFACEHUB_API_TOKEN = st.secrets['hfkey']["hfapikey"]
+#huggingfacehub_api_token='your huggingface access token here',
 # initialize Hugging Face LLM
-flan_t5_model = HuggingFaceHub(
+flan_t5_model = HuggingFaceHub(huggingfacehub_api_token=st.secrets['hfkey']["hfapikey"]
     repo_id="google/flan-t5-xxl",
     model_kwargs={"temperature":1e-1}
 )
