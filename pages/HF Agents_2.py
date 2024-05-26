@@ -17,7 +17,7 @@ import streamlit as st
 from huggingface_hub import login
 
 #Do this before HfAgent() and it should work
-login("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")
+login("")
 
 class CatImageFetcher(Tool):
     name = "cat_fetcher"
