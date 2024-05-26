@@ -10,7 +10,7 @@ st.write("[Gestione sessione] You have entered : ", st.session_state["my_input"]
 
 
 # provide your API KEY here
-os.environ['HUGGINGFACEHUB_API_TOKEN'] = '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'
+os.environ['HUGGINGFACEHUB_API_TOKEN'] = ''
 
 # initialize Hugging Face LLM
 flan_t5_model = HuggingFaceHub(
