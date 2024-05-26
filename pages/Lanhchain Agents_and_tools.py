@@ -18,8 +18,8 @@ st.markdown(
     """)
 st.write("Effettuiamo il caricamento")
 
-os.environ['OPENAI_API_KEY'] = "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"
-os.environ['SERPAPI_API_KEY'] = "7c8cfcece4912a04571589737764fb302b2db32e5f2e5f79cccde9bba93045cb"
+os.environ['OPENAI_API_KEY'] = ""
+os.environ['SERPAPI_API_KEY'] = ""
 
 llm = OpenAI(temperature=0)
 tool_names = ["serpapi"]
