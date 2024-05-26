@@ -8,8 +8,8 @@ import os
 import streamlit as st
 from langchain.memory import ConversationBufferMemory
 
-os.environ['OPENAI_API_KEY'] = "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"
-os.environ['SERPAPI_API_KEY'] = "7c8cfcece4912a04571589737764fb302b2db32e5f2e5f79cccde9bba93045cb"
+os.environ['OPENAI_API_KEY'] = ""
+os.environ['SERPAPI_API_KEY'] = ""
 
 st.subheader('In questo esempio si utilizza Langchain con OpenAI', divider='rainbow')
 
