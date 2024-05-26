@@ -12,7 +12,7 @@ st.write("You have entered : ", st.session_state["my_input"])
 
 
 # provide your API KEY here
-HUGGINGFACEHUB_API_TOKEN = st.secrets['hfapi']["hfapikey"]
+HUGGINGFACEHUB_API_TOKEN = st.secrets['hfkey']["hfapikey"]
 
 # initialize Hugging Face LLM
 flan_t5_model = HuggingFaceHub(
