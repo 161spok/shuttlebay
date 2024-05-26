@@ -13,7 +13,7 @@ import streamlit as st
 load_dotenv(find_dotenv()) # read local .env file
 
 #hf_api_key = os.environ['HF_API_KEY']
-hf_api_key = "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"
+hf_api_key = ""
 
 st.title("💬 LLM endpoint") 
 st.write("SUMMARIZATION pipeline")
