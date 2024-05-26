@@ -13,7 +13,7 @@ os.environ["HUGGINGFACEHUB_API_TOKEN"] = ""
 
 
 #Do this before HfAgent() and it should work
-login("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")
+
 
 def huggingface_agent(prompt):
     agent = HfAgent("https://api-inference.huggingface.co/models/bigcode/starcoder")
