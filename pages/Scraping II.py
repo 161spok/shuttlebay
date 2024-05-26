@@ -15,9 +15,9 @@ st.title("Esempio Scraping OpenAI")
 st.write("You have entered", st.session_state["my_input"])
 
 
-#openai_api_key = os.environ.get('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')
-openai_api_key = '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'
-#serpapi_api_key = os.environ.get('7c8cfcece4912a04571589737764fb302b2db32e5f2e5f79cccde9bba93045cb')
+
+openai_api_key = ''
+
 serpapi_api_key = '7c8cfcece4912a04571589737764fb302b2db32e5f2e5f79cccde9bba93045cb'
 
 #working_directory = TemporaryDirectory(dir=os.getcwd())
