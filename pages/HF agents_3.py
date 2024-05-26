@@ -9,7 +9,7 @@ from transformers import HfAgent
 #               attenzione
 # richiede molte risorse
 #----------------------------------------------------------------------------------------------------
-os.environ["HUGGINGFACEHUB_API_TOKEN"] = "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"
+os.environ["HUGGINGFACEHUB_API_TOKEN"] = ""
 
 
 #Do this before HfAgent() and it should work
