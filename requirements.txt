@@ -1,1 +1,1 @@
-huggingFace-hub
+huggingface-hub
