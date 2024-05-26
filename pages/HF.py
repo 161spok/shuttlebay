@@ -5,12 +5,14 @@ import streamlit as st
 import time
 
 st.title("Esempio 2 con chiave HF solo - LLM google/flan-t5-xxl")
-
+if 'my_input' not in st.session_state:
+    st.session_state['my_input'] = 'init'
+    
 st.write("You have entered : ", st.session_state["my_input"])
 
 
 # provide your API KEY here
-os.environ['HUGGINGFACEHUB_API_TOKEN'] = ''
+HUGGINGFACEHUB_API_TOKEN = st.secrets['hfapi']["hfapikey"]
 
 # initialize Hugging Face LLM
 flan_t5_model = HuggingFaceHub(
@@ -24,8 +26,8 @@ query2 = "What is 2 + 2 equals to?"
 generate = flan_t5_model.generate([query1, query2])
 #print(generate.generations)
 
-#st.write(generate.generations)
-
+st.write(generate.generations)
+"""
 with st.status("Downloading data...", expanded=True) as status:
     st.write("Searching for data...")
     time.sleep(2)
@@ -36,4 +38,5 @@ with st.status("Downloading data...", expanded=True) as status:
     status.update(label="Download complete!", state="complete", expanded=False)
 
 st.write(generate.generations)
+"""
     
