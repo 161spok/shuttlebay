@@ -2,7 +2,7 @@ import os
 import openai
 
 
-openai.api_key = "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"
+openai.api_key = ""
 
 # account for deprecation of LLM model
 import datetime
