@@ -1,2 +1,5 @@
 huggingface-hub
 langchain
+langchain-core
+langchain-community
+langchain-experimental
