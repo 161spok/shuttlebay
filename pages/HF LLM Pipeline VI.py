@@ -4,7 +4,7 @@ from langchain.prompts import PromptTemplate
 import streamlit as st
 import os
 
-os.environ["HUGGINGFACEHUB_API_TOKEN"] = "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"
+os.environ["HUGGINGFACEHUB_API_TOKEN"] = ""
 
 load_dotenv()
 
