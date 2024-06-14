@@ -22,7 +22,7 @@ else:
 
 # To control the randomness and creativity of the generated
 # text by an LLM, use temperature = 0.0
-chat = ChatOpenAI(openai_api_key = "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",temperature=0.0, model=llm_model)
+chat = ChatOpenAI(openai_api_key = "",temperature=0.0, model=llm_model)
 
 st.write("Chat ----> ",chat)
 
