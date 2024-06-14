@@ -155,7 +155,7 @@ st.write("prompt_template ---> ", prompt_template)
 
 messages = prompt_template.format_messages(text=customer_review)
 
-chat = ChatOpenAI(openai_api_key = "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",temperature=0.0, model=llm_model)
+chat = ChatOpenAI(openai_api_key = "",temperature=0.0, model=llm_model)
 
 response = chat(messages)
 st.write("response.content ---> ", response.content)
