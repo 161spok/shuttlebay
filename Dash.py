@@ -50,7 +50,9 @@ with tab2:
     st.session_state["ssystem_prompt"] = system_prompt
 
 with tab3:
-    st.header("An owl")
+    st.header("Prompt generator")
+    st.page_link("https://emitechlogic.com/blog/building-a-simple-prompt-generator-in-python/",)
+    st.page_link("https://github.com/felipeOliveira-1/gpt_prompt_generator/blob/main/prompt_generator_v5.py")
    #if submit2:
     #st.session_state.submitted = True
     if 'submitted' in st.session_state:
