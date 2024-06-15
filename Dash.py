@@ -51,8 +51,8 @@ with tab2:
 
 with tab3:
     st.header("Prompt generator")
-    st.page_link("https://emitechlogic.com/blog/building-a-simple-prompt-generator-in-python/",)
-    st.page_link("https://github.com/felipeOliveira-1/gpt_prompt_generator/blob/main/prompt_generator_v5.py")
+    st.page_link("https://emitechlogic.com/blog/building-a-simple-prompt-generator-in-python/", label="Page 1", icon="1️⃣")
+    st.page_link("https://github.com/felipeOliveira-1/gpt_prompt_generator/blob/main/prompt_generator_v5.py", label="Page 2", icon="2️⃣")
    #if submit2:
     #st.session_state.submitted = True
     if 'submitted' in st.session_state:
