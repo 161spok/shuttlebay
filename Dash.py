@@ -61,14 +61,16 @@ with tab3:
         
         if tipo_llm == 'Pre addestrato':
             #scelta_llm = st.selectbox("Link scelta LLM : ", ['https://chat.lmsys.org/?leaderboard', 'https://huggingface.co/spaces/HuggingFaceH4/open_llm_leaderboard'] , index=None, placeholder="Seleziona link...")
-            scelta_llm = st.selectbox("LLM disponibili: ", ['Perplexity', ''] , index=None, placeholder="Seleziona link...")
+            scelta_llm = st.selectbox("LLM disponibili: ", ['Perplexity', 'Claude', 'GPT-3.5', 'GPT-4.0'] , index=None, placeholder="Seleziona LLM...")
             
             llm = st.text_input("Inserisci LLM scelto : ", st.session_state["sllm"])
             submit3 = st.button("Invia", key="3")
         
             if submit3:
                 st.session_state["sllm"] = llm
+                st.session_state["sllm"] = scelta_llm
                 st.write(llm)
+                st.write(scelta_llm)
             else:
                 st.write("-------------")   
 
