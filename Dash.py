@@ -82,19 +82,19 @@ with tab3:
             else:
                 st.write("-------------")   
 
-    localizz_llm = st.selectbox("Localizzazione LLM : ", ['Locale', 'Pipeline'], index=None, placeholder="Seleziona localizzazione...")
-
-    if localizz_llm == 'Locale':
-            runpod = st.text_input("Inserisci setup Runpod")
-            submit4 = st.button("Invia", key="4")
-            if submit4:
-                st.session_state["srunpod"] = runpod
-                #st.sidebar.markdown("# Runpod 🎈")
-    
-    api_key = st.text_input("Inserisci API Key LLM scelto : ", st.session_state["sapi"])
-    submit5 = st.button("Invia", key="5")
-
-    sicurezza = st.selectbox("Pacchetti : ", ['GuardRails AI', 'GuardRails Nemo'], index=None, placeholder="Seleziona pacchetto...")
+            localizz_llm = st.selectbox("Localizzazione LLM : ", ['Locale', 'Pipeline'], index=None, placeholder="Seleziona localizzazione...")
+        
+            if localizz_llm == 'Locale':
+                    runpod = st.text_input("Inserisci setup Runpod")
+                    submit4 = st.button("Invia", key="4")
+                    if submit4:
+                        st.session_state["srunpod"] = runpod
+                        #st.sidebar.markdown("# Runpod 🎈")
+            
+            api_key = st.text_input("Inserisci API Key LLM scelto : ", st.session_state["sapi"])
+            submit5 = st.button("Invia", key="5")
+        
+            sicurezza = st.selectbox("Pacchetti : ", ['GuardRails AI', 'GuardRails Nemo'], index=None, placeholder="Seleziona pacchetto...")
 
 
 
