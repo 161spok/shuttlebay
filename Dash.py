@@ -16,20 +16,20 @@ st.sidebar.success("3 - Incorporare e archiviare blocchi")
 
 st.write('''Una tipica applicazione RAG ha due componenti principali:
 
-Indexing: pipeline per l'inserimento di dati da un'origine e l'indicizzazione. Questo di solito accade offline.
+**Indexing**: pipeline per l'inserimento di dati da un'origine e l'indicizzazione. Questo di solito accade offline.
 
-Retrieval and Generation: la catena RAG effettiva, che accetta la query dell'utente in fase di esecuzione e recupera i dati rilevanti dall'indice, quindi li passa al modello.
+**Retrieval and Generation**: la catena RAG effettiva, che accetta la query dell'utente in fase di esecuzione e recupera i dati rilevanti dall'indice, quindi li passa al modello.
 
 La sequenza completa più comune dai dati grezzi alla risposta è simile alla seguente:
 
-Indexing
+**Indexing**
 Load : Per prima cosa dobbiamo caricare i nostri dati. Questa operazione viene eseguita con DocumentLoaders.
 Split: Le divisioni di testo suddividono i documenti di grandi dimensioni in blocchi più piccoli. Ciò è utile sia per l'indicizzazione dei dati che per passarli in un modello, poiché i blocchi di grandi dimensioni sono più difficili da cercare e non si adattano alla finestra di contesto finito di un modello.
 Store: Abbiamo bisogno di un posto dove archiviare e indicizzare le nostre suddivisioni in modo che possano essere cercate in seguito. Questa operazione viene spesso eseguita utilizzando un modello VectorStore e Embeddings.
 
-Retrieval: in base all'input dell'utente, le suddivisioni pertinenti vengono recuperate dall'archiviazione utilizzando un recupero informazioni.
+**Retrieval**: in base all'input dell'utente, le suddivisioni pertinenti vengono recuperate dall'archiviazione utilizzando un recupero informazioni.
 
-Generation: un ChatModel / LLM produce una risposta utilizzando un prompt che include la domanda e i dati recuperati
+**Generation**: un ChatModel / LLM produce una risposta utilizzando un prompt che include la domanda e i dati recuperati
 ''')
 
 #---------------------------------------- inizializzazione sessione --------------------------------
