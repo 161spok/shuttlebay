@@ -61,9 +61,11 @@ with tab3:
             
             if selezione == "https://chat.lmsys.org/?leaderboard":
                 st.write("1")
+                st.page_link("https://chat.lmsys.org/?leaderboard", label="leaderboard", icon="1️⃣")
                 components.iframe("https://chat.lmsys.org/?leaderboard", height=500)
             else:
                 st.write("2")
+                st.page_link("https://huggingface.co/spaces/HuggingFaceH4/open_llm_leaderboard", label="leaderboard", icon="2️⃣")
                 components.iframe("https://huggingface.co/spaces/HuggingFaceH4/open_llm_leaderboard", height=500)
                 
             dim_llm = st.text_input("Dimensioni LLM : ", st.session_state["sllm"])
