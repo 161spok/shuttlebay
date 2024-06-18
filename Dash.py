@@ -26,7 +26,7 @@ if "my_input" not in st.session_state:
 def sub_mitted():
     st.session_state.submitted = True
 
-tab1, tab2, tab3 = st.tabs(["Sezione 1", "Sezione 2", "Sezione 3"])
+tab1, tab2, tab3 = st.tabs(["Descrizione problema", "System prompt", "Scelta tools"])
 
 with tab1:
     st.header("Descrizione")
