@@ -1,5 +1,6 @@
 # Contents of ~/my_app/main_page.py
 import streamlit as st
+import streamlit.components.v1 as components
 
 st.set_page_config(
     page_title="Multipage App",
@@ -56,11 +57,17 @@ with tab3:
         tipo_licenza_llm = st.selectbox("Licenza LLM : ", ['Opensource', 'Commerciale'], index=None, placeholder="Seleziona licenza...")
         tipo_llm         = st.selectbox("Tipo LLM : ", ['Pre addestrato', 'Nuovo'], index=None, placeholder="Seleziona tipo...")
         
-        if tipo_llm == 'Pre addestrato':
-            #scelta_llm = st.selectbox("Link scelta LLM : ", ['https://chat.lmsys.org/?leaderboard', 'https://huggingface.co/spaces/HuggingFaceH4/open_llm_leaderboard'] , index=None, placeholder="Seleziona link...")
-            scelta_llm = st.selectbox("LLM disponibili: ", ['Perplexity', 'Claude', 'GPT-3.5', 'GPT-4.0'] , index=None, placeholder="Seleziona LLM...")
+        if tipo_llm == 'Pre addestrato':  
+            scelta_llm = st.selectbox("LLM disponibili : ", ['Perplexity', 'Claude', 'GPT-3.5', 'GPT-4.0'] , index=None, placeholder="Seleziona LLM...")
+            selezione = st.selectbox("Link scelta LLM : ", ['https://chat.lmsys.org/?leaderboard', 'https://huggingface.co/spaces/HuggingFaceH4/open_llm_leaderboard'] , index=None, placeholder="Seleziona link...")
             
-            llm = st.text_input("Inserisci LLM scelto : ", st.session_state["sllm"])
+            if selezione == "https://chat.lmsys.org/?leaderboard":                
+                components.iframe("https://chat.lmsys.org/?leaderboard", height=500)
+            else:
+                components.iframe("https://huggingface.co/spaces/HuggingFaceH4/open_llm_leaderboard", height=500)
+                
+            dim_llm = st.text_input("Dimensioni LLM : ", st.session_state["sllm"])
+            
             submit3 = st.button("Invia", key="3")
         
             if submit3:
@@ -68,6 +75,7 @@ with tab3:
                 st.session_state["sllm"] = scelta_llm
                 st.write(llm)
                 st.write(scelta_llm)
+                st.write(dim_llm)
             else:
                 st.write("-------------")   
 
