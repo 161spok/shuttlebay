@@ -8,29 +8,18 @@ st.set_page_config(
 )
 
 st.title("Main Page 🎈")
-st.sidebar.success("Questa app di esperimenti utilizza RAG. Questo tipo di architettura implica l'utilizzo di diverse tecnologie: ")
 
-st.sidebar.success("1 - raccolta e caricamento dati")
-st.sidebar.success("2 - suddivisione documenti in blocchi")
-st.sidebar.success("3 - Incorporare e archiviare blocchi")
+st.page_link("https://medium.com/@vipra_singh/building-llm-applications-introduction-part-1-1c90294b155b#4d28", label="Introduzione", icon="1️⃣")
+st.page_link("https://medium.com/@vipra_singh/building-llm-applications-data-preparation-part-2-b7306d224245", label="Data preparation", icon="1️⃣")
+st.page_link("https://medium.com/@vipra_singh/building-llm-applications-sentence-transformers-part-3-a9e2529f99c1", label="Sentence transformers", icon="1️⃣")
+st.page_link("https://medium.com/@vipra_singh/building-llm-applications-vector-database-part-4-2bb29e7c798d", label="Vector database", icon="1️⃣")
+st.page_link("https://medium.com/@vipra_singh/building-llm-applications-retrieval-search-part-5-c83a7004037d", label="Search & retrieval", icon="1️⃣")
+st.page_link("https://medium.com/@vipra_singh/building-llm-applications-large-language-models-part-6-ea8bd982bdee", label="LLM", icon="1️⃣")
+st.page_link("https://medium.com/@vipra_singh/building-llm-applications-open-source-chatbots-part-7-1ca9c3653175", label="Open source RAG", icon="1️⃣")
+st.page_link("https://medium.com/@vipra_singh/building-llm-applications-evaluation-part-8-fcfa2f22bd1c", label="Evaluation", icon="1️⃣")
+st.page_link("https://medium.com/@vipra_singh/building-llm-applications-serving-llms-part-9-68baa19cef79", label="Serving LLM", icon="1️⃣")
+st.page_link("https://medium.com/@vipra_singh/building-llm-applications-advanced-rag-part-10-ec0fe735aeb1", label="Advanced RAG", icon="1️⃣")
 
-st.write('''Una tipica applicazione RAG ha due componenti principali:
-
-**Indexing**: pipeline per l'inserimento di dati da un'origine e l'indicizzazione. Questo di solito accade offline.
-
-**Retrieval and Generation**: la catena RAG effettiva, che accetta la query dell'utente in fase di esecuzione e recupera i dati rilevanti dall'indice, quindi li passa al modello.
-
-La sequenza completa più comune dai dati grezzi alla risposta è simile alla seguente:
-
-**Indexing**
-Load : Per prima cosa dobbiamo caricare i nostri dati. Questa operazione viene eseguita con DocumentLoaders.
-Split: Le divisioni di testo suddividono i documenti di grandi dimensioni in blocchi più piccoli. Ciò è utile sia per l'indicizzazione dei dati che per passarli in un modello, poiché i blocchi di grandi dimensioni sono più difficili da cercare e non si adattano alla finestra di contesto finito di un modello.
-Store: Abbiamo bisogno di un posto dove archiviare e indicizzare le nostre suddivisioni in modo che possano essere cercate in seguito. Questa operazione viene spesso eseguita utilizzando un modello VectorStore e Embeddings.
-
-**Retrieval**: in base all'input dell'utente, le suddivisioni pertinenti vengono recuperate dall'archiviazione utilizzando un recupero informazioni.
-
-**Generation**: un ChatModel / LLM produce una risposta utilizzando un prompt che include la domanda e i dati recuperati
-''')
 
 #---------------------------------------- inizializzazione sessione --------------------------------
 if "my_input" not in st.session_state:
