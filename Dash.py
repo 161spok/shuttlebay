@@ -20,7 +20,7 @@ st.page_link("https://medium.com/@vipra_singh/building-llm-applications-evaluati
 st.page_link("https://medium.com/@vipra_singh/building-llm-applications-serving-llms-part-9-68baa19cef79", label="Serving LLM", icon="1️⃣")
 st.page_link("https://medium.com/@vipra_singh/building-llm-applications-advanced-rag-part-10-ec0fe735aeb1", label="Advanced RAG", icon="1️⃣")
 
-
+st.page_link("pages/avvio.py", label="Avvio")
 
 
    
