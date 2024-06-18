@@ -59,7 +59,7 @@ with tab3:
             scelta_llm = st.selectbox("LLM disponibili : ", ['Perplexity', 'Claude', 'GPT-3.5', 'GPT-4.0'] , index=None, placeholder="Seleziona LLM...")
             selezione = None
             selezione = st.selectbox("Link scelta LLM : ", ['https://chat.lmsys.org/?leaderboard', 'https://huggingface.co/spaces/HuggingFaceH4/open_llm_leaderboard'] , index=None, placeholder="Seleziona link...")
-            
+            st.write(selezione)
             if selezione == "https://chat.lmsys.org/?leaderboard":
                 st.write("1")
                 st.page_link("https://chat.lmsys.org/?leaderboard", label="leaderboard", icon="1️⃣")
