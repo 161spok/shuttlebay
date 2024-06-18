@@ -49,15 +49,13 @@ with tab2:
 
 with tab3:
     st.header("Prompt generator")
-    st.page_link("https://emitechlogic.com/blog/building-a-simple-prompt-generator-in-python/", label="Page 1", icon="1️⃣")
-    st.page_link("https://github.com/felipeOliveira-1/gpt_prompt_generator/blob/main/prompt_generator_v5.py", label="Page 2", icon="2️⃣")
-   #if submit2:
-    #st.session_state.submitted = True
-    if 'submitted' in st.session_state:
-        tipo_licenza_llm = st.selectbox("Licenza LLM : ", ['Opensource', 'Commerciale'], index=None, placeholder="Seleziona licenza...")
-        tipo_llm         = st.selectbox("Tipo LLM : ", ['Pre addestrato', 'Nuovo'], index=None, placeholder="Seleziona tipo...")
+    st.page_link("https://emitechlogic.com/blog/building-a-simple-prompt-generator-in-python/", label="Sample prompt-generator 1", icon="1️⃣")
+    st.page_link("https://github.com/felipeOliveira-1/gpt_prompt_generator/blob/main/prompt_generator_v5.py", label="Sample prompt-generator 2", icon="2️⃣")
+   
+    tipo_licenza_llm = st.selectbox("Licenza LLM : ", ['Opensource', 'Commerciale'], index=None, placeholder="Seleziona licenza...")
+    tipo_llm         = st.selectbox("Tipo LLM : ", ['Pre addestrato', 'Nuovo'], index=None, placeholder="Seleziona tipo...")
         
-        if tipo_llm == 'Pre addestrato':  
+    if tipo_llm == 'Pre addestrato':  
             scelta_llm = st.selectbox("LLM disponibili : ", ['Perplexity', 'Claude', 'GPT-3.5', 'GPT-4.0'] , index=None, placeholder="Seleziona LLM...")
             selezione = st.selectbox("Link scelta LLM : ", ['https://chat.lmsys.org/?leaderboard', 'https://huggingface.co/spaces/HuggingFaceH4/open_llm_leaderboard'] , index=None, placeholder="Seleziona link...")
             
@@ -79,19 +77,19 @@ with tab3:
             else:
                 st.write("-------------")   
 
-        localizz_llm = st.selectbox("Localizzazione LLM : ", ['Locale', 'Pipeline'], index=None, placeholder="Seleziona localizzazione...")
+    localizz_llm = st.selectbox("Localizzazione LLM : ", ['Locale', 'Pipeline'], index=None, placeholder="Seleziona localizzazione...")
 
-        if localizz_llm == 'Locale':
+    if localizz_llm == 'Locale':
             runpod = st.text_input("Inserisci setup Runpod")
             submit4 = st.button("Invia", key="4")
             if submit4:
                 st.session_state["srunpod"] = runpod
                 #st.sidebar.markdown("# Runpod 🎈")
     
-        api_key = st.text_input("Inserisci API Key LLM scelto : ", st.session_state["sapi"])
-        submit5 = st.button("Invia", key="5")
+    api_key = st.text_input("Inserisci API Key LLM scelto : ", st.session_state["sapi"])
+    submit5 = st.button("Invia", key="5")
 
-        sicurezza = st.selectbox("Pacchetti : ", ['GuardRails AI', 'GuardRails Nemo'], index=None, placeholder="Seleziona pacchetto...")
+    sicurezza = st.selectbox("Pacchetti : ", ['GuardRails AI', 'GuardRails Nemo'], index=None, placeholder="Seleziona pacchetto...")
 
 
 
