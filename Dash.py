@@ -57,44 +57,46 @@ with tab3:
         
     if tipo_llm == 'Pre addestrato':  
             scelta_llm = st.selectbox("LLM disponibili : ", ['Perplexity', 'Claude', 'GPT-3.5', 'GPT-4.0'] , index=None, placeholder="Seleziona LLM...")
-            selezione = None
-            selezione = st.selectbox("Link scelta LLM : ", ['https://chat.lmsys.org/?leaderboard', 'https://huggingface.co/spaces/HuggingFaceH4/open_llm_leaderboard'] , index=None, placeholder="Seleziona link...")
-            #st.write(selezione)
-            if selezione == "https://chat.lmsys.org/?leaderboard":
-                #st.write("1")
-                st.page_link("https://chat.lmsys.org/?leaderboard", label="leaderboard", icon="1️⃣")
-                components.iframe("https://chat.lmsys.org/?leaderboard", height=500)
-            elif selezione == "https://huggingface.co/spaces/HuggingFaceH4/open_llm_leaderboard":
-                #st.write("2")
-                st.page_link("https://huggingface.co/spaces/HuggingFaceH4/open_llm_leaderboard", label="leaderboard", icon="2️⃣")
-                components.iframe("https://huggingface.co/spaces/HuggingFaceH4/open_llm_leaderboard", height=500)
-                
-            dim_llm = st.text_input("Dimensioni LLM : ", st.session_state["sllm"])
-            
-            submit3 = st.button("Invia", key="3")
         
-            if submit3:
-                st.session_state["sllm"] = llm
+            if scelta_llm:
                 st.session_state["sllm"] = scelta_llm
-                st.write(llm)
-                st.write(scelta_llm)
-                st.write(dim_llm)
-            else:
-                st.write("-------------")   
-
-            localizz_llm = st.selectbox("Localizzazione LLM : ", ['Locale', 'Pipeline'], index=None, placeholder="Seleziona localizzazione...")
-        
-            if localizz_llm == 'Locale':
-                    runpod = st.text_input("Inserisci setup Runpod")
-                    submit4 = st.button("Invia", key="4")
-                    if submit4:
-                        st.session_state["srunpod"] = runpod
-                        #st.sidebar.markdown("# Runpod 🎈")
-            
-            api_key = st.text_input("Inserisci API Key LLM scelto : ", st.session_state["sapi"])
-            submit5 = st.button("Invia", key="5")
-        
-            sicurezza = st.selectbox("Pacchetti : ", ['GuardRails AI', 'GuardRails Nemo'], index=None, placeholder="Seleziona pacchetto...")
+                localizz_llm = None
+                localizz_llm = st.selectbox("Localizzazione LLM : ", ['Locale', 'Pipeline'], index=None, placeholder="Seleziona localizzazione...")
+                st.session_state["locallm"] = local_llm
+                if localizz_llm == 'Locale':
+                        runpod = st.text_input("Inserisci setup Runpod")
+                        submit4 = st.button("Invia", key="4")
+                        if submit4:
+                            st.session_state["srunpod"] = runpod
+                else:
+                    selezione = None
+                    selezione = st.selectbox("Link scelta LLM : ", ['https://chat.lmsys.org/?leaderboard', 'https://huggingface.co/spaces/HuggingFaceH4/open_llm_leaderboard'] , index=None, placeholder="Seleziona link...")
+                    #st.write(selezione)
+                    if selezione == "https://chat.lmsys.org/?leaderboard":
+                        #st.write("1")
+                        st.page_link("https://chat.lmsys.org/?leaderboard", label="leaderboard", icon="1️⃣")
+                        components.iframe("https://chat.lmsys.org/?leaderboard", height=500)
+                    elif selezione == "https://huggingface.co/spaces/HuggingFaceH4/open_llm_leaderboard":
+                        #st.write("2")
+                        st.page_link("https://huggingface.co/spaces/HuggingFaceH4/open_llm_leaderboard", label="leaderboard", icon="2️⃣")
+                        components.iframe("https://huggingface.co/spaces/HuggingFaceH4/open_llm_leaderboard", height=500)
+                        
+                    dim_llm = st.text_input("Dimensioni LLM : ", st.session_state["sllm"])
+                    submit3 = st.button("Invia", key="3")
+                
+                    if submit3:
+                        st.session_state["dimllm"] = dim_llm
+                       
+                        #st.write(llm)
+                        #st.write(scelta_llm)
+                        #st.write(dim_llm)
+                    else:
+                        st.write("-------------")   
+                      
+                    api_key = st.text_input("Inserisci API Key LLM scelto : ", st.session_state["sapi"])
+                    submit5 = st.button("Invia", key="5")
+                
+                    sicurezza = st.selectbox("Pacchetti : ", ['GuardRails AI', 'GuardRails Nemo'], index=None, placeholder="Seleziona pacchetto...")
 
 
 
