@@ -7,10 +7,7 @@ st.set_page_config(
 )
 
 st.title("Main Page 🎈")
-st.sidebar.success("Questa app di esperimenti utilizza la RAG. Questo tipo di architettura implica l'utilizzo di diverse tecnologie: ")
-#st.sidebar.markdown("1 - raccolta e caricamento dati")
-#st.sidebar.markdown("2 - suddivisione documenti in blocchi")
-#st.sidebar.markdown("3 - Incorporare e archiviare blocchi")
+st.sidebar.success("Questa app di esperimenti utilizza RAG. Questo tipo di architettura implica l'utilizzo di diverse tecnologie: ")
 
 st.sidebar.success("1 - raccolta e caricamento dati")
 st.sidebar.success("2 - suddivisione documenti in blocchi")
@@ -43,7 +40,7 @@ with tab2:
     #system_prompt = st.text_area("Descrivi il prompt di sistema", st.session_state["ssystem_prompt"])
     st.markdown("**Esempio:** Voglio che tu funga da generatore di titoli per i pezzi scritti. Ti fornirò l'argomento e le parole chiave di un articolo e genererai cinque titoli che attirano l'attenzione. Si prega di mantenere il titolo conciso e di meno di 20 parole e di assicurarsi che il significato sia mantenuto. Le risposte utilizzeranno il tipo di lingua dell'argomento. Il mio primo argomento è 'LearnData, una base di conoscenza costruita su VuePress, in cui ho integrato tutti i miei appunti e articoli, facilitandone l'utilizzo e la condivisione.'")
    
-    system_prompt = st.text_area("Descrivi il prompt di sistema")
+    system_prompt = st.text_area("Inserisci il prompt di sistema")
     
     submit2 = st.button("Invia", key="2", on_click=sub_mitted)
     st.sidebar.write(system_prompt)
