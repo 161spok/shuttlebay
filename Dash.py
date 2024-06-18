@@ -26,10 +26,10 @@ if "my_input" not in st.session_state:
 def sub_mitted():
     st.session_state.submitted = True
 
-tab1, tab2, tab3 = st.tabs(["FASE 1 - Descrizione problema", "FASE 2 - System prompt", "FASE 3 - Scelta LLM"])
+tab1, tab2, tab3, tab4 = st.tabs(["FASE 1 - Descrizione problema", "FASE 2 - System prompt", "FASE 3 - Scelta LLM", "FASE 4 - Generazione del prompt"])
 
 with tab1:
-    st.header("Descrizione")
+    st.header("Descrizione problema")
     #my_input = st.text_area("Descrivi quello che deve fare l'applicazione", st.session_state["smy_input"])
     my_input = st.text_area("Descrivi quello che deve fare l'applicazione")    
     submit1 = st.button("Invia", key="1", on_click=sub_mitted)
@@ -48,9 +48,7 @@ with tab2:
     st.session_state["ssystem_prompt"] = system_prompt
 
 with tab3:
-    st.header("Prompt generator")
-    st.page_link("https://emitechlogic.com/blog/building-a-simple-prompt-generator-in-python/", label="Sample prompt-generator 1", icon="1️⃣")
-    st.page_link("https://github.com/felipeOliveira-1/gpt_prompt_generator/blob/main/prompt_generator_v5.py", label="Sample prompt-generator 2", icon="2️⃣")
+    st.header("Scelta LLM")
    
     tipo_licenza_llm = st.selectbox("Licenza LLM : ", ['Opensource', 'Commerciale'], index=None, placeholder="Seleziona licenza...")
     tipo_llm         = st.selectbox("Tipo LLM : ", ['Pre addestrato', 'Nuovo'], index=None, placeholder="Seleziona tipo...")
@@ -98,8 +96,10 @@ with tab3:
                 
                     sicurezza = st.selectbox("Pacchetti : ", ['GuardRails AI', 'GuardRails Nemo'], index=None, placeholder="Seleziona pacchetto...")
 
-
-
+with tab4:
+    st.header("Generazione prompt")
+    st.page_link("https://emitechlogic.com/blog/building-a-simple-prompt-generator-in-python/", label="Sample prompt-generator 1", icon="1️⃣")
+    st.page_link("https://github.com/felipeOliveira-1/gpt_prompt_generator/blob/main/prompt_generator_v5.py", label="Sample prompt-generator 2", icon="2️⃣")
 
 
 
